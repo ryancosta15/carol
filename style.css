@@ -1,0 +1,148 @@
+:root{
+    --vanilla:#ECE4B7;
+    --earthyellow:#EABE7C;
+    --flame:#DD6031;
+    --bistre:#311E10;
+}
+body{
+    background-color: var(--vanilla);
+    color: var(--flame);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: var(--bistre);
+}
+a{
+    appearance: none;
+    text-decoration: none;
+    color: var(--vanilla);
+}
+img{
+    width:90px;
+    height: 160px;
+}
+.box_shadow{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.row{
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+.column{
+    flex-direction: column;
+}
+.container {
+    position: relative;
+    padding: 15px;
+    max-width: 50%;
+    margin: 0 auto;
+}
+.gallery-wrapper {
+    overflow-x: auto;
+}
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 20px;
+    line-height: 250px;
+    width: 40px;
+    color: #fff;
+    transition: all 600ms ease-in-out;
+    background: linear-gradient(to left, transparent 0%, #EABE7C 70%);
+    opacity: 0.2;
+    cursor: pointer;
+    border: none;
+}
+.arrow-left:hover,
+.arrow-right:hover {
+    opacity: 1;
+}
+.arrow-right {
+    right: 0;
+    left: auto;
+    text-align: right;
+    background: linear-gradient(to right, transparent 0%, #EABE7C 70%);
+    }
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+.date {
+    background-color: var(--flame);
+    width: 400px;
+    height: 250px;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+    opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+    display: flexbox;
+    color: var(--vanilla);
+    border-radius: 4px;
+    text-align: center;
+}
+.current-item {
+    opacity: 1;
+}
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}    
+@media (max-width: 600px) {
+    img{
+        width:90px;
+        height: 160px;
+    }
+    .container {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: small;
+    }
+    .barkana{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .date {
+        background-color: var(--flame);
+        width: 80%;
+        height: 10%px;
+        flex-shrink: 0;
+        transition: all 600ms ease-in-out;
+        align-items: center;
+        justify-content: center;
+        display: flexbox;
+        color: var(--vanilla);
+        border-radius: 4px;
+        text-align: center;
+    }
+    #spotify{
+        display: inline-block;
+        outline: none;
+        cursor: pointer;
+        font-weight: 600;
+        border-radius: 3px;
+        padding: 12px 24px;
+        border: 0;
+        color: #fff;
+        background: var(--flame);
+        line-height: 1.15;
+        font-size: 1.5em;
+    }
+}
