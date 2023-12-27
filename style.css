@@ -4,6 +4,11 @@
     --flame:#DD6031;
     --bistre:#311E10;
 }
+a{
+    appearance: none;
+    text-decoration: none;
+    color: var(--vanilla);
+}
 body{
     background-color: var(--vanilla);
     color: var(--flame);
@@ -12,37 +17,15 @@ body{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
+div{
+    display: flexbox;
+}
 h1{
     color: var(--bistre);
-}
-a{
-    appearance: none;
-    text-decoration: none;
-    color: var(--vanilla);
 }
 img{
     width:90px;
     height: 160px;
-}
-.box_shadow{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-.row{
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-}
-.column{
-    flex-direction: column;
-}
-.container {
-    position: relative;
-    padding: 15px;
-    max-width: 50%;
-    margin: 0 auto;
-}
-.gallery-wrapper {
-    overflow-x: auto;
 }
 .arrow-left,
 .arrow-right {
@@ -70,16 +53,27 @@ img{
     left: auto;
     text-align: right;
     background: linear-gradient(to right, transparent 0%, #EABE7C 70%);
-    }
-
-.gallery {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 20px;
+}
+.box_shadow{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.column{
+    flex-direction: column;
+}
+.container {
+    position: relative;
+    padding: 15px;
+    max-width: 50%;
+    margin: 0 auto;
+}
+.current-item {
+    opacity: 1;
+    margin: none;
+    text-align: center;
 }
 .date {
     background-color: var(--flame);
-    width: 400px;
+    width: 500px;
     height: 250px;
     flex-shrink: 0;
     transition: all 600ms ease-in-out;
@@ -91,27 +85,30 @@ img{
     border-radius: 4px;
     text-align: center;
 }
-.current-item {
-    opacity: 1;
+.gallery-wrapper {
+    overflow-x: auto;
+}
+.gallery {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    gap: 30px;
 }
 .gallery-wrapper::-webkit-scrollbar {
     display: none;
 }
-
 .gallery-wrapper {
     -ms-overflow-style: none;
     scrollbar-width: none; 
-}    
+}  
+.row{
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}  
 @media (max-width: 600px) {
     img{
         width:90px;
         height: 160px;
-    }
-    .container {
-        position: relative;
-        max-width: 100%;
-        margin: 0 auto;
-        font-size: small;
     }
     .barkana{
         text-align: center;
@@ -119,10 +116,16 @@ img{
         justify-content: center;
 
     }
+    .container {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: small;
+    }
     .date {
         background-color: var(--flame);
-        width: 80%;
-        height: 10%px;
+        width: 30%;
+        height: 10%;
         flex-shrink: 0;
         transition: all 600ms ease-in-out;
         align-items: center;
