@@ -107,7 +107,7 @@ div{
     -ms-overflow-style: none;
     scrollbar-width: none; 
 }    
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     img{
         width:90px;
         height: 160px;
