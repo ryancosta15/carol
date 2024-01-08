@@ -126,7 +126,7 @@ div{
     }
     .date {
         background-color: var(--flame);
-        width: 30%;
+        width: 20%;
         height: 10%;
         flex-shrink: 0;
         transition: all 600ms ease-in-out;
