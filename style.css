@@ -108,6 +108,9 @@ div{
     scrollbar-width: none; 
 }    
 @media (max-width: 900px) {
+    h3{
+        font-size: medium;
+    }
     img{
         width:90px;
         height: 160px;
