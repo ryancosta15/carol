@@ -118,6 +118,7 @@ div{
     .container {
         position: relative;
         max-width: 100%;
+        max-height: 320px;
         margin: 0 auto;
         font-size: small;
     }
@@ -130,7 +131,7 @@ div{
     .date {
         background-color: var(--flame);
         width: 20%;
-        height: 10%;
+        height: 20%;
         flex-shrink: 0;
         transition: all 600ms ease-in-out;
         align-items: center;
