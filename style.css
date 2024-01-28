@@ -73,8 +73,37 @@ div{
     left: auto;
     text-align: right;
     background: linear-gradient(to right, transparent 0%, #EABE7C 70%);
-    }
-
+}
+.badge{
+    position: absolute;
+    background: var(--bistre);
+    color: var(--vanilla);
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 3px 10px;
+}
+.tumb{
+    height: 300px;
+    background-color: var(--bistre);
+    padding: 20px;
+    display: grid;
+    place-items: center;
+}
+.tumb img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.catagory{
+    display: block;
+    color: var(--vanilla);
+    font-size: 12px;
+    font-weight:700;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
 .gallery {
     display: inline-flex;
     flex-flow: row nowrap;
@@ -99,6 +128,12 @@ div{
     margin: none;
     text-align: center;
 }
+.card{
+    position: relative;
+    width: 380px;
+    background: var(--earthyellow);
+    box-shadow: 0 2px 7px #dfdfdf;
+}
 .gallery-wrapper::-webkit-scrollbar {
     display: none;
 }
@@ -106,7 +141,15 @@ div{
 .gallery-wrapper {
     -ms-overflow-style: none;
     scrollbar-width: none; 
-}    
+}  
+.pato{
+    width: 100%;
+    height: 100%;
+}
+hr{
+    display: block;
+    border: 1px solid var(--bistre);
+}  
 @media (max-width: 1000px) {
     h3{
         font-size: medium;
